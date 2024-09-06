@@ -38,7 +38,25 @@ export class RegisterPage extends RegisterElements {
         await this.page.locator(RegisterElements.HOBBIES).click();
     }
 
-    async digitarLinguagem() {
+    async linguagemSelecionada(linguagem: string) {
+        await this.page.locator(RegisterElements.LINGUAGEM_ESCOLHIDA).click();
+        await this.page.locator(RegisterElements.LINGUAGEM_SELECIONADA(linguagem)).click();
         await this.page.locator(RegisterElements.LINGUAGEM).click();
+
+    }
+
+    async skillEscolhida(skillEscolhida) {
+        await this.page.selectOption(RegisterElements.SKILL(skillEscolhida), skillEscolhida);
+
+    }
+
+    async paisEscolhido(paisEscolhido) {
+        await this.page.locator(RegisterElements.paiis).click()
+        await this.page.locator(RegisterElements.PAIS()).click()
+    }
+
+
+    async excluirLinguagem(){
+        await this.page.locator(RegisterElements.EXCLUIR_LINGUAGEM).click();
     }
 }

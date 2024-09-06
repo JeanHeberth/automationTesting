@@ -1,6 +1,5 @@
-import  {test} from "playwright/test";
+import {test} from "playwright/test";
 import {RegisterPage} from "../../src/page/RegisterPage";
-import {Page} from "@playwright/test";
 
 let registerPage: RegisterPage;
 test.beforeEach(async ({page}) => {
@@ -16,8 +15,9 @@ test('Realizando registro', async () => {
     await registerPage.digitarTelefone("99-99999999")
     await registerPage.selecionarGenero()
     await registerPage.escolherHobbies()
-    await registerPage.digitarLinguagem()
-
+    await registerPage.linguagemSelecionada("Catalan")
+    await registerPage.skillEscolhida("Java")
+    await registerPage.paisEscolhido("Australia")
 
 })
 
