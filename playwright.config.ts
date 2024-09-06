@@ -17,7 +17,7 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
-    headless: false,
+    headless: true,
     video: 'retain-on-failure',
     screenshot: 'on',
     trace: 'on-first-retry',
